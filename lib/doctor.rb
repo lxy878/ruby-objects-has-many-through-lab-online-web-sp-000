@@ -7,15 +7,15 @@ class Doctor
   end
 
   def appointments
-
+    Appointment.all.find_all {|appointment| appointment.doctor == self}
   end
 
   def new_appointment
-    
+
   end
 
   def patients
-
+    appointments.collect {|appointment| appointment.patient}
   end
 
 end
