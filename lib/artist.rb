@@ -11,7 +11,7 @@ class Artist
   end
 
   def songs
-
+    
   end
 
   def new_song
