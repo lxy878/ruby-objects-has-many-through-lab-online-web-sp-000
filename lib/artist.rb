@@ -18,7 +18,7 @@ class Artist
     Song.new(name, self, genre)
   end
 
-  def genre
+  def genres
     songs.collect {|song| song.genre}
   end
 end
