@@ -11,10 +11,10 @@ class Genre
   end
 
   def songs
-    
+    Song.all.find_all {|song| song.genre == self}
   end
 
   def artists
-
+    songs.collect {|song| song.artist}
   end
 end
