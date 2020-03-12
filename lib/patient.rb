@@ -15,6 +15,10 @@ class Patient
   end
 
   def appointments
-    
+    Appointment.all.find_all {|appointment| appointment.patient == self}
+  end
+
+  def doctors
+    appointments.each {|appointment| appointment.doctor}
   end
 end
