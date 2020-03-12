@@ -6,6 +6,10 @@ class Doctor
     @@all << self
   end
 
+  def self.all
+    @@all
+  end
+  
   def appointments
     Appointment.all.find_all {|appointment| appointment.doctor == self}
   end
